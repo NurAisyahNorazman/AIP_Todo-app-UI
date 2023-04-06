@@ -1,0 +1,25 @@
+.mat-typography{
+    text-align: center;
+}
+
+.form-text-title{
+    background-color: rgb(228, 255, 160);
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.custom-input-size{
+    width: 100%;
+}
+
+.btn-sub{
+    width: 20%;
+    background-color: rgb(126, 255, 119);
+}
+
+.btn-cancel{
+    width: 21%;
+    color: white;
+    background-color: rgb(255, 0, 43);
+}

@@ -1,0 +1,51 @@
+.custom-matcard
+{
+    text-align: left;
+    background-color: rgb(250, 190, 190);
+    margin-bottom: 10px;
+}
+
+.custom-mathead{
+    text-decoration: line-through;
+}
+
+.tag-category{
+    color: black;
+    background-color: rgb(255, 86, 86);
+    width: max-content;
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.mainBody
+{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.main-head{
+    background-color: rgb(192, 250, 129);
+    border-radius: 5px;
+}
+
+.main-title{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.custom-mat-card
+{
+    margin: auto;
+    padding: 20px;
+    width: 70%;
+    background-color:rgb(251, 246, 225);
+}
+
+.btn-box{
+    text-align: center;
+}
+
+button{
+    width: auto;
+}

@@ -1,0 +1,27 @@
+.custom-mat-card
+{
+    margin: auto;
+    padding: 20px;
+    width: 70%;
+    background-color:rgb(251, 246, 225);
+    text-align: center;
+}
+
+.main-title{
+    font-weight: bold;
+    font-size: 25px;
+    background-color: rgb(192, 250, 129);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.link-word{
+    text-decoration: none;
+}
+
+.form-text{
+    color: rgb(116, 107, 107);
+}
+
+
+

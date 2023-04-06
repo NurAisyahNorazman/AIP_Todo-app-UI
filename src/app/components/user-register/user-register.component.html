@@ -1,0 +1,39 @@
+<mat-card class="custom-mat-card">
+  <span class="main-title">Todo App</span>
+  <br>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="registerForm" novalidate>
+    <div>
+      <h1 class="form-header">
+        Register
+      </h1>
+    </div>
+    <div class="form-block">
+        <input type="email" formControlName="email" placeholder="user@gmail.com">
+        <br>
+        <small class="form-text text-muted">Please enter valid email address</small>
+        <!-- <div *ngIf="registerForm?.get('email')?.errors?.['email']">
+          <small class="form-text text-muted">Please enter valid email address.</small>
+        </div> -->
+        <br>
+ 
+        <input type="password" placeholder="Password" formControlName="password" id="password" required>
+        <br>
+        <small class="form-text text-muted">At least 6 characters password</small>
+        <br>
+
+        <input type="password" placeholder="Confirm Password" formControlName="password" >   
+        <br>    
+    </div>
+    <br>
+
+      <button class="btn-sub" type="submit" [disabled]="!registerForm.valid">Register</button>
+
+</form><br>
+
+<div>
+  <a class="link-word" routerLink="/login" routerLinkActive="active" >
+     Already have an account? Login here.
+  </a>
+</div>
+
+</mat-card>

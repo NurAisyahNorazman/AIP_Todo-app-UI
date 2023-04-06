@@ -1,0 +1,31 @@
+.mainBody
+{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.main-head{
+    background-color: rgb(192, 250, 129);
+    border-radius: 5px;
+}
+
+.main-title{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.custom-mat-card
+{
+    margin: auto;
+    padding: 20px;
+    width: 70%;
+    background-color:rgb(251, 246, 225);
+}
+
+.btn-box{
+    text-align: center;
+}
+
+button{
+    width: auto;
+}

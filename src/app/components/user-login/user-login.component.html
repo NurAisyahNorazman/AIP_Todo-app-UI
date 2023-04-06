@@ -1,0 +1,25 @@
+<mat-card class="custom-mat-card">
+    <span class="main-title">Todo App</span>
+    <br>
+    <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+        <div>
+            <h1 class="form-header">
+                Login
+            </h1>
+        </div>
+        <div class="btn-block">
+            <input type="text" formControlName="email" placeholder="Email"/>
+            <br><br>
+            <input type="password" formControlName="password" placeholder="Password">
+        </div><br>
+
+        <button class="btn-sub" type="submit" [disabled]="!loginForm.valid">Login</button>
+    </form><br>
+
+    <div class="btn-box">
+        <a class="link-word" routerLink="/register" routerLinkActive="active">
+            Don't have an account? Register here.
+        </a>
+        <br><br>
+    </div>
+</mat-card>

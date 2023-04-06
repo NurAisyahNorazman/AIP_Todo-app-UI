@@ -1,0 +1,14 @@
+.custom-matcard
+{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.tag-category{
+    color: black;
+    background-color: rgb(164, 248, 248);
+    width: max-content;
+    border-radius: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+}

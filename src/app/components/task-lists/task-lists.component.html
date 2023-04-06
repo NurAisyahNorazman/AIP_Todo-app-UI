@@ -1,0 +1,20 @@
+<h2>My Tasks</h2>
+<ng-container *ngIf="tasks.length > 0; else noData">
+<mat-card class="custom-matcard" *ngFor="let task of tasks">
+    <mat-card-header>
+        <mat-card-title>{{ task.title }}</mat-card-title>
+        <mat-card-subtitle class="tag-category">{{ task.category }}</mat-card-subtitle>
+        <mat-card-subtitle>{{ task.description }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions align="end">
+        <button mat-button [routerLink]="['/todos', task.id]" (click)="openTaskViewDialog(task)">View</button>
+        <button mat-button [routerLink]="['/todos', task.id]" (click)="openTaskFormEditDialog(task)">Edit</button>
+        <button mat-button [routerLink]="['/todos', task.id]" (click)="openSoftDeleteDialog(task)">Delete</button>
+    </mat-card-actions>
+</mat-card>
+</ng-container>
+
+<ng-template #noData>
+    <p>Yay, No task for today!</p>
+</ng-template>
+

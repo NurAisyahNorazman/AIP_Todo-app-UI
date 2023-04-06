@@ -1,0 +1,11 @@
+<mat-dialog-content class="mat-typography">
+    <h3 class="text-title">Restore Task</h3>
+    <p>Are you sure you want to restore this task?</p>
+    <div class="container">
+      <mat-dialog-actions align="center">
+        <button mat-stroked-button class="btn-confirm" (click)="restoreTask(task.id!)" mat-dialog-close>confirm</button>
+        <button mat-stroked-button class="btn-cancel" mat-dialog-close>Cancel</button>
+      </mat-dialog-actions>
+    </div>
+</mat-dialog-content>
+

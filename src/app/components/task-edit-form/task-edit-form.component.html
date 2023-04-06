@@ -1,0 +1,39 @@
+<mat-dialog-content class="mat-typography">
+    <h3 class="form-text-title">Edit Task</h3>
+    <div class="container">
+      <form class="Form" [formGroup]="taskForm" (ngSubmit)="submitUpdateTaskForm()" novalidate>
+        <mat-form-field appearance="fill" class="custom-input-size">
+            <mat-label>Title</mat-label>
+            <input matInput [(ngModel)]="task.title" formControlName="title">
+        </mat-form-field><br>
+        <mat-form-field appearance="fill" class="custom-input-size">
+            <mat-label>Description</mat-label>
+            <textarea matInput [(ngModel)]="task.description" formControlName="description"></textarea>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="custom-input-size">
+            <mat-label>Due date</mat-label>
+            <input matInput [matDatepicker]="picker" [(ngModel)]="task.dueDate" formControlName="dueDate">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="fill" class="custom-input-size">
+            <mat-label>Category</mat-label>
+            <mat-select [(ngModel)]="task.category" class="form-control" formControlName="category">
+              <mat-option value="Personal">Personal</mat-option>
+              <mat-option value="Work">Work</mat-option>
+              <mat-option value="Studies">Studies</mat-option>
+              <mat-option value="Chores">Chores</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+        <button mat-stroked-button class="btn-sub" type="submit">Save</button>
+      </form>
+      <mat-dialog-actions align="center">
+        <button mat-stroked-button class="btn-cancel" mat-dialog-close>Cancel</button>
+      </mat-dialog-actions>
+    </div>
+</mat-dialog-content>
+  
+
+

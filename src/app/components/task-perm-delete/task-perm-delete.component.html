@@ -1,0 +1,49 @@
+<body>
+    <div class="mainBody">
+        <mat-card class="custom-mat-card">
+            <mat-toolbar class="main-head">
+                <button mat-icon-button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item [routerLink]="['/todos']">
+                        <mat-icon>assignment_ind</mat-icon>
+                        <span>My Task</span>
+                    </button>
+                    <button mat-menu-item [routerLink]="['/todos/deleted']">
+                        <mat-icon>delete</mat-icon>
+                        <span>Deleted Task</span>
+                    </button>
+                    <button mat-menu-item (click)="onLogout()">
+                        <mat-icon>person</mat-icon>
+                        <span>Logout</span>
+                      </button>
+                </mat-menu>
+                <span class="main-title">Todo App</span>
+            </mat-toolbar>
+            <br>
+            <content>
+                <h2>Deleted Tasks</h2>
+                <ng-container *ngIf="tasks.length > 0; else noData">
+                    <mat-card class="custom-matcard" *ngFor="let task of tasks">
+                        <mat-card-header class="custom-mathead">
+                            <mat-card-title>{{ task.title }}</mat-card-title>
+                            <mat-card-subtitle class="tag-category">{{ task.category }}</mat-card-subtitle>
+                            <mat-card-subtitle>{{ task.description }}</mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-actions align="end">
+                            <button mat-button [routerLink]="['/todos/deleted', task.id]"
+                                (click)="openTaskRestoreDialog(task)">Restore</button>
+                            <button mat-button [routerLink]="['/todos/deleted', task.id]"
+                                (click)="openCompleteDeleteDialog(task)">Delete</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </ng-container>
+            </content>
+        </mat-card>
+    </div>
+</body>
+
+<ng-template #noData>
+    <p>Deleted task is empty</p>
+</ng-template>
